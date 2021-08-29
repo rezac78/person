@@ -3,9 +3,10 @@ import React from 'react';
 
 const Person = ({ fullname, deleted, change }) => {
     return (
-        <div onClick={deleted}>
+        <div>
             <p>{`${fullname}`}</p>
-            <input placeholder={fullname} />
+            <input type="text" placeholder={fullname} onChange={change} />
+            <button onClick={deleted}>delete</button>
         </div>
     )
 }
